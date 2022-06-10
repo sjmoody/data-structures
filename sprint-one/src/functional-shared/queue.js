@@ -26,7 +26,7 @@ var queueMethods = {
 
   dequeue: function() {
     // get the value from the front
-    debugger;
+
     var pointer = this.front;
     let result = this.storage[pointer];
     // delete value from storage
