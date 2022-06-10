@@ -44,6 +44,7 @@ var queueMethods = {
     return result;
   },
 
+
   size: function() {
     if (this.rear === -1 || this.front === -1) {
       return 0;
