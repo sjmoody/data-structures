@@ -25,26 +25,16 @@ var LinkedList = function() {
   };
 
   list.contains = function(target) {
-<<<<<<< HEAD
     // take care if target === tail value
     if(this.tail.value === target){
-=======
-    if (this.tail.value === target) {
->>>>>>> be6f55e8c7eb53844fa520906529388f83b5921f
       return true;
     }
     // create new pointer
     var cur = this.head;
 
-<<<<<<< HEAD
     // iterate through from head to pre-tail node
     while(cur.next !== null) {
       if(cur.value === target) {
-=======
-    // iterate from head to tail
-    while (cur.next !== null) {
-      if (cur.value === target) {
->>>>>>> be6f55e8c7eb53844fa520906529388f83b5921f
         return true;
       }
       cur = cur.next;
