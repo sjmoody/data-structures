@@ -8,7 +8,7 @@ var Tree = function(value) {
   _.extend(newTree, treeMethods); // style to extend
   // your code here
   // children is an array containing a number of subtrees
-  newTree.children = null;  // fix me
+  newTree.children = []; // fix me
 
   return newTree;
 };
@@ -17,12 +17,21 @@ var treeMethods = {};
 
 //  .addChild() method, takes any value, sets that as the target of a node, and adds that node as a child of the tree
 treeMethods.addChild = function(value) {
+  var newNode = new Tree(value);
+  this.children.push(newNode);
 
 };
 
 // A .contains() method, takes any input and returns a boolean reflecting whether it can be found as the value of the target node or any descendant node
 treeMethods.contains = function(target) {
   // recursively search through tree to find target
+
+  // Base case:
+  // this.value
+
+  // Recursive case:
+
+
 };
 
 
