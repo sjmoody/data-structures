@@ -1,3 +1,4 @@
+// Implement a graph class, in pseudoclassical style, with the following properties:
 
 
 // Instantiate a new graph
