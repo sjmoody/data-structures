@@ -24,4 +24,10 @@ describe('set', function() {
     expect(set.contains('Mel Gibson')).to.equal(false);
   });
 
+  // additional test case
+  it('should not remove values from a set even  if we are the same pair', function() {
+    set.add('Yunsup Jung');
+    set.remove('Steven Moody');
+    expect(set.contains('Yunsup Jung')).to.equal(true);
+  });
 });

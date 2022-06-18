@@ -41,4 +41,16 @@ describe('tree', function() {
     expect(tree.contains(8)).to.equal(true);
   });
 
+  // additional test case
+  it('should correctly detect double nested children', function() {
+    tree.addChild(1);
+    tree.addChild(2);
+    tree.children[0].addChild(3);
+    tree.children[1].addChild(4);
+    tree.children[0].children[0].addChild(12);
+    tree.children[1].children[0].addChild(100);
+    expect(tree.contains(25)).to.equal(false);
+    expect(tree.contains(12)).to.equal(true);
+    expect(tree.contains(100)).to.equal(true);
+  });
 });

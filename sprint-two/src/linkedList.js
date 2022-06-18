@@ -3,8 +3,6 @@ var LinkedList = function() {
   list.head = null;
   list.tail = null;
 
-
-
   list.addToTail = function(value) {
     var newNode = new Node(value);  // create new node, which contains val and next
     if(this.head === null) {
@@ -56,4 +54,5 @@ var Node = function(value) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ * A: O(n) for contain method, but O(1) for addToTail, removeHead methods.
  */

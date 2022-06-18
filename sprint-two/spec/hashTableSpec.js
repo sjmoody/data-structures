@@ -29,6 +29,13 @@ describe('hashTable', function() {
     expect(hashTable.retrieve('Bob')).to.equal('Barker');
   });
 
+  // additional test case
+  it('should not be the same key if the input is lowercase', function() {
+    hashTable.insert('bob', 'Loblaw');
+    hashTable.insert('Bob', 'Barker');
+    expect(hashTable.retrieve('bob')).to.equal('Loblaw');
+  });
+
   it('should not contain values that were removed', function() {
     hashTable.insert('Steven', 'Tyler');
     hashTable.remove('Steven');
