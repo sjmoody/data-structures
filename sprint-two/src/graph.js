@@ -51,8 +51,10 @@ Graph.prototype.addEdge = function(fromNode, toNode) {
   var revEdge = {};
   edge[fromNode] = toNode;
   revEdge[toNode] = fromNode;
-  this.edges.push(edge);
-  this.edges.push(revEdge);
+  if(!this.hasEdge(fromNode, toNode)) {
+    this.edges.push(edge);
+    this.edges.push(revEdge);
+  }
 };
 
 
